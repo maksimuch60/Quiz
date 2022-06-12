@@ -1897,6 +1897,7 @@ GameObject:
   - component: {fileID: 1399337544}
   - component: {fileID: 1399337543}
   - component: {fileID: 1399337542}
+  - component: {fileID: 1399337546}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1986,3 +1987,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1399337546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399337541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de966af71ca433e4d9b42cec2139592c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _questionNumber: {fileID: 334766985}
+  _question: {fileID: 878423852}
+  _questionImage: {fileID: 203969297}
+  _answer: {fileID: 769022536}
+  _answer1: {fileID: 686032180}
+  _answer2: {fileID: 51386455}
+  _answer3: {fileID: 596013581}
