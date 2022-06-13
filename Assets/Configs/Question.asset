@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914edc86a9fe4aaf92a48e863db65ce8, type: 3}
   m_Name: Question
   m_EditorClassIdentifier: 
-  QuestionNumberLabel: {fileID: 0}
-  QuestionLabel: {fileID: 0}
+  QuestionNumberText: 1
+  QuestionText: "\u0427\u0442\u043E \u043D\u0435 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F
+    \u043F\u0440\u0438\u043D\u0446\u0438\u043F\u043E\u043C \u043E\u043E\u043F?"
   QuestionImage: {fileID: 0}
   Answers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - "\u0418\u043D\u043A\u0430\u043F\u0441\u0443\u043B\u044F\u0446\u0438\u044F"
+  - "\u041D\u0430\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435"
+  - "\u041F\u043E\u043B\u0438\u043C\u043E\u0440\u0444\u0438\u0437\u043C"
+  - "\u0420\u0435\u043A\u0443\u0440\u0441\u0438\u044F"

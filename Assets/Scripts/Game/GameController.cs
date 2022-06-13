@@ -19,7 +19,7 @@ namespace Game
         [SerializeField] private Button _answer2;
         [SerializeField] private Button _answer3;
 
-        private Question _currentQuestion;
+        [SerializeField] private Question _currentQuestion;
 
         private Button[] _answers;
 
@@ -40,7 +40,7 @@ namespace Game
 
         private void Start()
         {
-            
+            SetQuestion(_currentQuestion);
         }
 
         #endregion
@@ -50,10 +50,26 @@ namespace Game
 
         private void AnswerButtonClicked()
         {
-            Button buttonComponent = EventSystem.current.currentSelectedGameObject.gameObject.GetComponent<Button>();
-            TextMeshProUGUI textMeshProUGUI = buttonComponent.GetComponentInChildren<TextMeshProUGUI>();
             
         }
+
+        private void SetQuestion(Question question)
+        {
+            _questionNumber.text = question.QuestionNumberText;
+            _question.text = question.QuestionText;
+            _questionImage.sprite = question.QuestionImage;
+            foreach(Button button in _answers)
+            {
+                SetButtonText(button, question.GetRandomAnswer());
+            }
+        }
+
+        private void SetButtonText(Button button, string text)
+        {
+            TextMeshProUGUI textMeshProUGUI = button.GetComponentInChildren<TextMeshProUGUI>();
+            textMeshProUGUI.text = text;
+        }
+        
 
         #endregion
     }
