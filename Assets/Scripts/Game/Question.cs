@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Game
 {
@@ -10,8 +9,6 @@ namespace Game
     {
         #region Variables
 
-        public string QuestionNumberText;
-
         [TextArea(4, 6)]
         public string QuestionText;
         public Sprite QuestionImage;
@@ -19,21 +16,14 @@ namespace Game
         [TextArea(1, 2)]
         public string[] Answers = new string[4];
 
-        #endregion
-
-
-        #region Public methods
-
-        public string GetRandomAnswer()
-        {
-            int randomIndex = Random.Range(0, Answers.Length);
-            string randomAnswer = Answers[randomIndex].ToString();
-            Answers.ElementAt(randomIndex).Remove(randomIndex);
-            return randomAnswer;
-        }
+        [Range(0, 3)]
+        public int RightAnswerIndex;
 
         #endregion
-        
+
+
+        #region Unity lifecycle
+
         void OnValidate()
         {
             if (Answers.Length != 4)
@@ -41,5 +31,17 @@ namespace Game
                 Array.Resize(ref Answers, 4);
             }
         }
+
+        #endregion
+
+
+        #region Public methods
+
+        public string GetAnswer(int index)
+        {
+            return Answers.ElementAt(index);
+        }
+
+        #endregion
     }
 }
